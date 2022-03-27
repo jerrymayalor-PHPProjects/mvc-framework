@@ -28,12 +28,12 @@ use Views\UsersView;
                 //    $userCls = new Models\Users();
                 //    echo $userCls->userModelMessage();
                    $userControler = new Controllers\UsersController();
-                   echo $userControler->controllerMessage(); 
+                   echo $userControler->controllerMessage() ."Index"; 
 
                    echo "<hr>";
 
                    $userView = new Views\UsersView;
-                   echo $userView->viewMessage(); 
+                   echo $userView->viewMessage() ."Index"; 
                 ?>
             </center>
         </div>
