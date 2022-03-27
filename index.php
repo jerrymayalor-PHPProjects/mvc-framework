@@ -27,8 +27,11 @@ use Views\UsersView;
                 //    echo $db->databaseMessage();
                 //    $userCls = new Models\Users();
                 //    echo $userCls->userModelMessage();
-                //    $userControler = new Controllers\UsersController();
-                //    echo $userControler->controllerMessage(); 
+                   $userControler = new Controllers\UsersController();
+                   echo $userControler->controllerMessage(); 
+
+                   echo "<hr>";
+
                    $userView = new Views\UsersView;
                    echo $userView->viewMessage(); 
                 ?>
