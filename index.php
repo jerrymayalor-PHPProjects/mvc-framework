@@ -1,7 +1,11 @@
 <?php
 
+use Controllers\UsersController;
 use Database\Dbh;
+use Database\Users;
 use LDAP\Result;
+use Models\Users as ModelsUsers;
+use Views\UsersView;
 
   include 'class-autoloader.php' ?>
 
@@ -19,9 +23,14 @@ use LDAP\Result;
         <div class="main">
             <center>
                 <?php 
-                   $userCls = new User;
-                   echo $db->databaseMessage();
-                
+                //    $db = new Database\Dbh();
+                //    echo $db->databaseMessage();
+                //    $userCls = new Models\Users();
+                //    echo $userCls->userModelMessage();
+                //    $userControler = new Controllers\UsersController();
+                //    echo $userControler->controllerMessage(); 
+                   $userView = new Views\UsersView;
+                   echo $userView->viewMessage(); 
                 ?>
             </center>
         </div>

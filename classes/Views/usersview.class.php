@@ -1,16 +1,14 @@
 <?php
 
-namespace Models;
 namespace Views;
 
-Use Models;
+use Models\Users;
 Use Views;
 
 
-class UsersView extends Models\Users {
-    public function displayMessage() {
-
-        $message = $this->showMessage();
-        return $message;
+class UsersView extends Users{
+    public function viewMessage() {
+        $getModelMessage = $this->userModelMessage();
+        echo  $getModelMessage . "Views";
     }
 }

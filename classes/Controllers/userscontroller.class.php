@@ -1,16 +1,15 @@
 <?php
 
-namespace Models;
 namespace Controllers;
 
-Use Models;
 Use Controllers;
+use Models\Users;
 
-
-class UsersController extends User {
+class UsersController extends Users{
 
     public function controllerMessage(){
-        echo "Controller-> ";
+        $getModelMessage = $this->userModelMessage();
+        echo  $getModelMessage . "Controller-> ";
     }
     
 }

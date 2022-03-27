@@ -1,16 +1,15 @@
 <?php
 
 namespace Models;
-namespace Database;
 
+use Database\Dbh;
 use Models;
 
-use Database\Dbh as Database;
-
-class Users extends Database {
+class Users extends Dbh{
 
     public function userModelMessage(){
-       echo "Model-> ";
+       $getDbMessage = $this->databaseMessage(); 
+       echo $getDbMessage . "Model-> ";
     }
 
     
