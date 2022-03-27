@@ -23,17 +23,14 @@ use Views\UsersView;
         <div class="main">
             <center>
                 <?php 
-                //    $db = new Database\Dbh();
-                //    echo $db->databaseMessage();
-                //    $userCls = new Models\Users();
-                //    echo $userCls->userModelMessage();
-                   $userControler = new Controllers\UsersController();
-                   echo $userControler->controllerMessage() ."Index"; 
+                    // $userContrlr = new UsersController();
+                    // $userContrlr->createUser('Glayden');
+                    $userContrlr = new UsersController();
+                    $userContrlr->editUser( 1, 'Jerry May' );
 
-                   echo "<hr>";
-
-                   $userView = new Views\UsersView;
-                   echo $userView->viewMessage() ."Index"; 
+                    $viewUsers = new UsersView();
+                    $viewUsers->showAllUsers();
+              
                 ?>
             </center>
         </div>
