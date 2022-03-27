@@ -1,6 +1,9 @@
-<?php include 'view/TestView.php'; ?>
-<?php include 'model/TestModel.php'; ?>
-<?php include 'controller/TestController.php'; ?>
+<?php
+
+use Database\Dbh;
+use LDAP\Result;
+
+  include 'class-autoloader.php' ?>
 
 
 <!DOCTYPE html>
@@ -12,15 +15,17 @@
     <title>Document</title>
 </head>
 <body>
-    <?php 
-        $objectView = new TestView;
-        $objectModel = new TestModel;
-        $objectController = new TestController;
-
-        echo $objectView->view . " " . $objectModel->db . " " . $objectController->controller; 
-    
-    
-    ?>
+    <div class="container">
+        <div class="main">
+            <center>
+                <?php 
+                   $userCls = new User;
+                   echo $db->databaseMessage();
+                
+                ?>
+            </center>
+        </div>
+    </div>
 
     
 </body>
