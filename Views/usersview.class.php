@@ -1,16 +1,11 @@
 <?php
 
-namespace Views;
-
-use Models\Users;
-Use Views;
-
 
 class UsersView extends Users{
-    // public function viewMessage() {
-    //     $getModelMessage = $this->userModelMessage();
-    //     echo  $getModelMessage . "Views-> ";
-    // }
+    public function viewMessage() {
+        $getModelMessage = $this->userModelMessage();
+        echo  $getModelMessage . "Views-> ";
+    }
 
     /* === SHOW A SINGLE DATA FROM THE DATABASE === */
     public function showSingleUser( $name ){

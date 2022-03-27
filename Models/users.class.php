@@ -1,17 +1,21 @@
 <?php
 
-namespace Models;
-
-use Database\Dbh;
-use Models;
-use PDO;
 
 class Users extends Dbh {
 
-    // public function userModelMessage(){
-    //    $getDbMessage = $this->databaseMessage(); 
-    //    echo $getDbMessage . "Model-> ";
-    // }
+    protected $name;
+
+    protected function __construct( $val )
+    {   
+        $this->name = $val;
+    }
+
+
+
+    public function userModelMessage(){
+       $getDbMessage = $this->databaseMessage(); 
+       echo $getDbMessage . "Model-> ";
+    }
 
     /* === GET ALL DATA FROM THE DATABASE === */
     public function getAllUsers(){

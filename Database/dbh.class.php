@@ -1,8 +1,5 @@
 <?php
 
-namespace Database;
-use Database;
-use PDO;
 
 class  Dbh {
 

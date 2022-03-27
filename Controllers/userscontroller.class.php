@@ -1,16 +1,12 @@
 <?php
 
-namespace Controllers;
 
-Use Controllers;
-use Models\Users;
+class UsersController extends Users {
 
-class UsersController extends Users{
-
-    // public function controllerMessage(){
-    //     $getModelMessage = $this->userModelMessage();
-    //     echo  $getModelMessage . "Controller-> ";
-    // }
+    public function cntrlrMessage() {
+        $getModelMessage = $this->userModelMessage();
+        echo  $getModelMessage . "Controller-> ";
+    }
 
     /* === INSERT DATA INTO DATABASE === */
     public function createUser( $name ){
@@ -23,3 +19,6 @@ class UsersController extends Users{
     }
     
 }
+
+
+

@@ -1,15 +1,7 @@
 <?php
 
-spl_autoload_register( 'myAutoLoader' );
-
-function myAutoLoader( $className ){
-    $path = "classes/";
-    $extension = ".class.php";
-    $fileName = $path . $className . $extension;
-    
-    if (!file_exists($fileName)) {
-        return false;
-    }
-
-    include_once $fileName;
-}
+include 'Database/dbh.class.php';
+include 'Models/users.class.php';
+include 'Controllers/userscontroller.class.php';
+include 'Views/usersview.class.php';
+include 'Views/components/modals.php';
