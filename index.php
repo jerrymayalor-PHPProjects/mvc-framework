@@ -1,8 +1,6 @@
-<?php
+<?php 
 
-
-include 'class-autoloader.php';
-
+include 'includes/class-autoloader.inc.php'; 
 ?>
 
 
@@ -20,14 +18,15 @@ include 'class-autoloader.php';
 <body>
     <div class="container mt-5">
         <div class="jumbotron">
-            <di class="row">
-                <div class="col">
+            <button type="button" data-toggle="modal" data-target="#myModal" class="btn btn-primary">Launch modal</button>
+            <?php include 'components/modals.php' ?>
+            <di class="row" style="overflow-y: auto;">
+                <div class="col" style="max-height:300px;">
                     <center>
                         <?php
-                           $obj = new UsersController();
-                           echo $obj->cntrlrMessage();
+                           $obj = new UsersView();
+                           echo $obj->showAllUsers();
                         ?>
-                        <!-- <button type="button" data-toggle="modal" data-target="#myModal" class="btn btn-primary">Launch modal</button> -->
                     </center>
 
                 </div>

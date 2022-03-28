@@ -1,6 +1,5 @@
 <?php
 
-
 class UsersView extends Users{
     public function viewMessage() {
         $getModelMessage = $this->userModelMessage();
@@ -17,7 +16,7 @@ class UsersView extends Users{
     public function showAllUsers(){
         $datas = $this->getAllUsers();
         foreach ( $datas as $data ) {
-           echo $data['id']. " : " . $data['name']. "<hr>";     
+           echo $data['id']. " : " . $data['name']. " : " . $data['age'] . "<hr>" ;     
         }
         
     }

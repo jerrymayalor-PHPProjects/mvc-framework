@@ -1,16 +1,15 @@
 <?php
 
-
 class Users extends Dbh {
 
-    protected $name;
+    public $name;
+    public $age;
 
-    protected function __construct( $val )
-    {   
-        $this->name = $val;
-    }
-
-
+    // public function __construct( String $valName, int $valAge )
+    // {
+    //     $this->name = $valName;
+    //     $this->age = $valAge;
+    // }
 
     public function userModelMessage(){
        $getDbMessage = $this->databaseMessage(); 
@@ -31,7 +30,7 @@ class Users extends Dbh {
     }
 
     /* === GET A SINGLE DATA FROM THE DATABASE === */
-    protected function getUser( $name ){
+    public function getUser( $name ){
         $sql = "SELECT * FROM users WHERE name = ?";
         $stmt = $this->connect()->prepare($sql);
         $stmt->execute( [$name] );
@@ -41,14 +40,16 @@ class Users extends Dbh {
     }
 
     /* === INSERT DATA INTO DATABASE === */
-    protected function insertUser( $name ){
-        $sql = "INSERT INTO users( name ) VALUES ( ? ) ";
+    public function insertUser( $name, $age ){
+        $sql = "INSERT INTO users( name , age ) VALUES ( ? , ? ) ";
         $stmt = $this->connect()->prepare( $sql );
-        $stmt->execute( [$name] );
+        $stmt->execute( [$name, $age] );
+        header("location: ../");
+        $this->connect()->close;
     }
 
     /* === UPDATE DATA FROM DATABASE === */
-    protected function updateUser( $id , $name ){
+    public function updateUser( $id , $name ){
         $sql = "UPDATE `users` SET `name` = ? WHERE `users`.`id` = ? ";
         $stmt = $this->connect()->prepare( $sql );
         $stmt->execute( [$id], [$name] );

@@ -9,12 +9,16 @@
           <span aria-hidden="true" class="text-danger">&times;</span>
         </button>
       </div>
-      <form method="POST" action="classes/controllers/userscontroller.class.php">
+      <form method="POST" action="includes/usersController.inc.php">
           
           <div class="modal-body">
               <div class="form-group">
                   <label for="name">Name</label>
                   <input type="text" class="form-control" name="name"  placeholder="Enter name">
+              </div>
+              <div class="form-group">
+                  <label for="age">Age</label>
+                  <input type="number" class="form-control" name="age"  placeholder="Enter Age">
               </div>
         </div>
         <div class="modal-footer">
